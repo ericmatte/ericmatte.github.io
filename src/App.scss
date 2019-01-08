@@ -11,10 +11,8 @@ body,
 
 .section {
     padding: 0;
-
-    .scrollable {
-        overflow-y: auto;
-        height: 100%;
+    .container {
+        display: table;
     }
 }
 
