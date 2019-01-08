@@ -1,0 +1,6 @@
+.email-fab {
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+    }
+}

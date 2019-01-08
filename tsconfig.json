@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "lib": ["es5", "es6", "es7", "dom"],
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true
+    },
+    "include": ["./src/**/*"],
+    "files": ["assets.d.ts"],
+    "awesomeTypescriptLoaderOptions": {
+        "reportFiles": ["./src/**/*"]
+    }
+}
