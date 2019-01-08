@@ -1,0 +1,51 @@
+#fp-nav {
+    transition: opacity 0.25s ease-out;
+
+    right: 15px !important;
+    ul li {
+        $max-size: 18px;
+        width: $max-size !important;
+        height: $max-size !important;
+
+        a {
+            @mixin setSize($size) {
+                height: $size !important;
+                width: $size !important;
+                margin: (-$size / 2) 0 0 (-$size / 2) !important;
+            }
+
+            &.active span {
+                @include setSize($max-size);
+                background: #1565c0 !important;
+            }
+            span {
+                border: 1px solid #e2e2e2 !important;
+                box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+                background: #3e3e3e !important;
+                @include setSize(10px);
+            }
+        }
+
+        @keyframes slide-left {
+            from {
+                transform: translate(25%, 0);
+            }
+        }
+
+        transition: 0.5s ease;
+        &:hover {
+            .fp-tooltip {
+                animation: slide-left 0.25s ease-in-out;
+            }
+        }
+        .fp-tooltip {
+            top: -6px !important;
+            right: 28px !important;
+            font-size: 17px !important;
+            background-color: rgba(31, 31, 31, 0.85);
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+    }
+}

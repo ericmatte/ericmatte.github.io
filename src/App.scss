@@ -1,0 +1,24 @@
+@import "styles/imports";
+
+html,
+body,
+#root {
+    // height: 100%;
+    // background-color: $background;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 0;
+
+    .scrollable {
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+::selection {
+    background: #2a7bd0;
+    color: white;
+}

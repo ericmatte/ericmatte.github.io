@@ -1,0 +1,42 @@
+.pictures-gallery {
+    .container {
+        display: table;
+    }
+
+    .gallery {
+        padding: 0 30px 40px 30px;
+
+        .pswp {
+            height: 100vh;
+            position: absolute !important;
+        }
+
+        .pswp-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            .pswp-thumbnail {
+                display: flex;
+                border: 0;
+                height: 200px;
+                flex-grow: 1;
+                margin: 5px;
+                cursor: pointer;
+
+                transition: transform 0.25s;
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                img {
+                    flex-grow: 1;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
