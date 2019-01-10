@@ -41,6 +41,7 @@
         "no-eval": true,
         "no-invalid-this": true,
         "no-internal-module": true,
+        "no-null-keyword": true,
         "no-string-literal": false,
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": true,

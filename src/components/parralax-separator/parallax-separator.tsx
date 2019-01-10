@@ -1,17 +1,21 @@
 import "./parallax-separator.scss";
-import * as separatorImage from "../../assets/separator.jpg";
 
 import * as React from "react";
+import * as separatorImage from "../../assets/separator.jpg";
 
 export default class ParallaxSeparator extends React.PureComponent<{}, {}> {
+    private parallaxDiv = React.createRef<HTMLDivElement>();
+
     public componentDidMount() {
-        M.Parallax.init(document.querySelectorAll(".parallax"), {});
+        if (this.parallaxDiv.current) {
+            M.Parallax.init(this.parallaxDiv.current, {});
+        }
     }
 
     public render() {
         return (
             <div className="parallax-container">
-                <div className="parallax">
+                <div ref={this.parallaxDiv} className="parallax">
                     <img src={separatorImage} />
                 </div>
             </div>

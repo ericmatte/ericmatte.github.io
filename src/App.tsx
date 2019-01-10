@@ -10,56 +10,79 @@ import ParallaxSeparator from "./components/parralax-separator/parallax-separato
 import PersonalIntroduction from "./components/personal-introduction/personal-introduction";
 import PicturesGallery from "./components/pictures-gallery/pictures-gallery";
 import Projects from "./components/projects/projects";
+import ScrollSpy from "./components/scroll-spy/scroll-spy";
 
 interface IAppState {
-    gallerySectionVisible: boolean;
     slideShowVisible: boolean;
+    showEmailFab: boolean;
 }
 
+export type Section = {
+    id: string;
+    ref: React.RefObject<HTMLDivElement>;
+};
+
+const IMAGES_SECTION_ID = "Images";
+
 export default class App extends React.Component<{}, IAppState> {
-    private galleryDiv = React.createRef<HTMLDivElement>();
+    private sections: Section[] = [
+        { id: "Introduction", ref: React.createRef<HTMLDivElement>() },
+        { id: "Projects", ref: React.createRef<HTMLDivElement>() },
+        { id: IMAGES_SECTION_ID, ref: React.createRef<HTMLDivElement>() }
+    ];
 
     constructor(props: {}) {
         super(props);
         this.state = {
-            gallerySectionVisible: false,
-            slideShowVisible: false
+            slideShowVisible: false,
+            showEmailFab: true
         };
+    }
+
+    public componentDidMount() {
+        window.addEventListener("scroll", () => this.handleScroll());
     }
 
     public render() {
         return (
             <div className="app">
-                <PersonalIntroduction />
-                <AnimatedMouse onClick={() => fullpage_api.moveSectionDown()} />
-                <EmailFab visible={!this.state.gallerySectionVisible} />
+                <div id={this.sections[0].id} ref={this.sections[0].ref} className="section scrollspy">
+                    <PersonalIntroduction />
+                    <AnimatedMouse
+                        onClick={() => {
+                            return;
+                        }}
+                    />
+                </div>
 
-                <div className="section">
+                <div id={this.sections[1].id} ref={this.sections[1].ref} className="section scrollspy">
                     <Projects />
                 </div>
 
                 <ParallaxSeparator />
 
-                <div className="section" ref={this.galleryDiv} onScroll={() => this.onScroll()}>
-                    <PicturesGallery slideShowToggled={isVisible => this.toggleFullPageNavigationButtons(isVisible)} />
+                <div id={this.sections[2].id} ref={this.sections[2].ref} className="section scrollspy">
+                    <PicturesGallery
+                        slideShowToggled={() => {
+                            return;
+                        }}
+                    />
                 </div>
 
+                <EmailFab visible={this.state.showEmailFab} />
+                <ScrollSpy sections={this.sections} />
                 <Footer />
             </div>
         );
     }
 
-    private onScroll() {
-        const galleryDivVisible = this.galleryDiv.current!.scrollTop === 0;
-        this.setState({
-            gallerySectionVisible: galleryDivVisible
-        });
-    }
-
-    private toggleFullPageNavigationButtons(visible: boolean) {
-        const buttons = document.getElementById("fp-nav");
-        if (buttons !== null) {
-            buttons.style.opacity = visible ? "0" : "1";
+    private handleScroll() {
+        const imagesSection = this.sections[2].ref.current;
+        if (imagesSection) {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            this.setState({
+                showEmailFab: scrollTop < imagesSection.offsetTop - window.innerHeight
+            });
         }
     }
 }

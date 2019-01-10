@@ -1,3 +1,5 @@
+@import "../../../../styles/theme";
+
 .single-image {
     width: 100%;
 }
@@ -7,4 +9,38 @@
         // height: 100%;
         // object-fit: contain;
     }
+
+    position: relative;
+    .gradient {
+        @mixin gradation($direction, $offset) {
+            position: absolute;
+            padding: 0 25px;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+            color: $white-border;
+            transition: all 0.25s ease;
+            background-position: $offset;
+            background-repeat: no-repeat !important;
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+
+            &:hover {
+                font-size: 1.5rem;
+                color: $clean-blue;
+                background: linear-gradient(to #{$direction}, #{$smooth-gray + "2e"} 0%, #{$smooth-gray + "00"} 100%);
+            }
+        }
+
+        &--left {
+            @include gradation(right, -60px);
+            left: 0;
+        }
+
+        &--right {
+            @include gradation(left, 60px);
+            right: 0;
+        }
+    }
+
+    @include indicatorItems();
 }

@@ -9,11 +9,16 @@ interface ICarouselProps {
 }
 
 export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
+    private carouselDiv = React.createRef<HTMLDivElement>();
+    private carouselInstance: M.Carousel | undefined;
+
     public componentDidMount() {
-        M.Carousel.init(document.querySelectorAll(".carousel"), {
-            indicators: true,
-            fullWidth: true
-        });
+        if (this.carouselDiv.current) {
+            this.carouselInstance = M.Carousel.init(this.carouselDiv.current, {
+                indicators: true,
+                fullWidth: true
+            });
+        }
     }
 
     public render() {
@@ -22,7 +27,7 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
         } else {
             return (
                 <div className="images-carousel">
-                    <div className="carousel carousel-slider center">
+                    <div ref={this.carouselDiv} className="carousel carousel-slider center">
                         {this.props.images.map(image => {
                             return (
                                 <a className="carousel-item" key={image}>
@@ -31,8 +36,26 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
                             );
                         })}
                     </div>
+                    <div onClick={() => this.nextSlide("left")} className="gradient--left valign-wrapper">
+                        <FontAwesomeIcon icon={["fas", "chevron-left"]} size="lg" />
+                    </div>
+                    <div onClick={() => this.nextSlide("right")} className="gradient--right valign-wrapper">
+                        <FontAwesomeIcon icon={["fas", "chevron-right"]} size="lg" />
+                    </div>
                 </div>
             );
+        }
+    }
+
+    private nextSlide(direction: "left" | "right") {
+        if (!this.carouselInstance) {
+            return;
+        }
+
+        if (direction === "left") {
+            this.carouselInstance.prev();
+        } else {
+            this.carouselInstance.next();
         }
     }
 }
