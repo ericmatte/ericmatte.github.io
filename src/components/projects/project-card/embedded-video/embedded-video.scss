@@ -23,13 +23,11 @@
 
     .youtube {
         &__wrapper {
-            max-width: 680px;
             margin: 60px auto;
             padding: 0 20px;
         }
 
         background-color: #000;
-        margin-bottom: 30px;
         position: relative;
         padding-top: 56.25%;
         overflow: hidden;
@@ -44,34 +42,48 @@
             opacity: 0.7;
         }
 
-        .play-button {
-            width: 90px;
-            height: 60px;
-            background-color: #333;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-            z-index: 1;
-            opacity: 0.8;
-            border-radius: 6px;
-            &:before {
-                content: "";
-                border-style: solid;
-                border-width: 15px 0 15px 26px;
-                border-color: transparent transparent transparent #fff;
+        &:hover {
+            .play-button {
+                opacity: 1;
+                background: rgb(255, 0, 0);
             }
         }
 
         .play-button {
-            cursor: pointer;
             position: absolute;
-            &:before {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate3d(-50%, -50%, 0);
-            }
+            width: 85px;
+            height: 60px;
             top: 50%;
             left: 50%;
             transform: translate3d(-50%, -50%, 0);
+            z-index: 1;
+
+            opacity: 0.8;
+            background: rgb(32, 32, 32);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            border-radius: 50% / 10%;
+            text-align: center;
+            transition: all 150ms ease-out;
+            &::before {
+                background: inherit;
+                border-radius: 5% / 50%;
+                bottom: 9%;
+                content: "";
+                left: -5%;
+                position: absolute;
+                right: -5%;
+                top: 9%;
+            }
+            &::after {
+                border-style: solid;
+                border-width: 1em 0 1em 1.732em;
+                border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+                content: " ";
+                font-size: 1em;
+                margin: -1em 0 0 -0.75em;
+                top: 50%;
+                position: absolute;
+            }
         }
 
         iframe {
