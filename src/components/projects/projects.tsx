@@ -11,7 +11,7 @@ export default class Projects extends React.PureComponent<{}, {}> {
         return (
             <div className="projects">
                 <div className="grey lighten-3">
-                    <div className="container">
+                    <div className="projects__container">
                         <h2 className="header">Projects</h2>
                         <p className="grey-text text-darken-3 lighten-3">
                             This is the list a all my projects which I am really proud to have created, or being part of

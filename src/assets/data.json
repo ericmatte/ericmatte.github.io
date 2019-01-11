@@ -168,7 +168,7 @@
             "description": "For my major project in computer engineering, I am a member of the project DEVINE. The goal of DEVINE is to implement into a robot the ability to interact with a human and play the game GuessWhat?! with him, using speech recognition and real-time analysis of his surrounding. This project is currently in development. The main challenge of the team will be to integrate the concepts and the work already done by IGLU researchers in artificial intelligence (AI) into a real project to demonstrate the potential of AI. The robot used for this project is IRL-1 from the Introlab.",
             "reference": "https://devineproject.github.io/",
             "logo": "projects/devine.png",
-            "video": "https://www.youtube.com/embed/4hZenY6JE78",
+            "videoId": "4hZenY6JE78",
             "tags": ["University", "IGLU", "GuessWhat?!", "AI", "Python", "ROS"]
         },
         {
@@ -186,7 +186,7 @@
             "title": "R2D2 - Concours Robot-Jouet",
             "description": "At my first year at the Université de Sherbrooke, we participated in a competition were we had to create a simple robot that will help children learn while having fun.<br />Our team made a R2D2 who ask questions about the solar system. It then scan the associated board game using RFID to see if the player has the right answer.",
             "logo": "projects/crj.png",
-            "video": "https://www.youtube.com/embed/ZSJ4cDC3b8k",
+            "videoId": "0sjcXanB0nk",
             "prizes": ["100$ + Prix du Jury"],
             "tags": ["Team Project", "University", "C++", "Arduino", "RFID", "Robot ArmUS"]
         },
@@ -194,7 +194,7 @@
             "title": "Air Guitar Hero",
             "description": "Air Guitar Hero is a game similar to guitar hero. The main difference: The player plays without a guitar! Instead, we used gloves with conductive contacts to detect the player gestures.",
             "logo": "projects/airguitarhero.png",
-            "video": "https://www.youtube.com/embed/m-P_RStB4fE",
+            "videoId": "m-P_RStB4fE",
             "tags": ["Team Project", "University", "Java", "Applet"]
         },
         {

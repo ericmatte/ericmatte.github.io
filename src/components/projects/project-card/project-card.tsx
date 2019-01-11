@@ -2,7 +2,8 @@ import "./project-card.scss";
 
 import * as React from "react";
 
-import Carousel from "./carousel/carousel";
+import Carousel, { ImageAndWebPPath } from "./carousel/carousel";
+
 import EmbeddedVideo from "./embedded-video/embedded-video";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -18,7 +19,7 @@ interface IProjectCardProps {
     images?: ProjectImages;
     github?: string;
     reference?: string;
-    video?: string;
+    videoId?: string;
     prizes?: string[];
     tags: string[];
 }
@@ -106,18 +107,21 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
     private getProjectPreview() {
         if (this.props.images) {
             return <Carousel images={this.getProjectImages(this.props.images)} />;
-        } else if (this.props.video) {
-            return <EmbeddedVideo youtubeUrl={this.props.video} />;
+        } else if (this.props.videoId) {
+            return <EmbeddedVideo youtubeId={this.props.videoId} />;
         } else {
             return;
         }
     }
 
-    private getProjectImages(projectImages: ProjectImages): string[] {
-        const slides: string[] = [];
+    private getProjectImages(projectImages: ProjectImages): ImageAndWebPPath[] {
+        const slides: ImageAndWebPPath[] = [];
 
         for (let i = 1; i <= projectImages.number; i++) {
-            slides.push(`public/${projectImages.path}/${i}.jpg`);
+            slides.push({
+                image: `public/${projectImages.path}/${i}.jpg`,
+                webp: `public/${projectImages.path}/webp/${i}.webp`
+            });
         }
 
         return slides;

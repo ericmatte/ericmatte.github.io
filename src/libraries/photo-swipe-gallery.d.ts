@@ -13,6 +13,7 @@ declare module "react-photoswipe" {
     export type PhotoSwipeItem = {
         src: string;
         thumbnail: string;
+        webPThumbnail: string;
         h: number;
         w: number;
         title: string;

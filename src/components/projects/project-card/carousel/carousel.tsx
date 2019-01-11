@@ -3,9 +3,15 @@ import "./carousel.scss";
 import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import WebPImage from "../../../webp-image/webp-image";
+
+export type ImageAndWebPPath = {
+    image: string;
+    webp: string;
+};
 
 interface ICarouselProps {
-    images: string[];
+    images: ImageAndWebPPath[];
 }
 
 export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
@@ -23,15 +29,17 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
 
     public render() {
         if (this.props.images.length === 1) {
-            return <img className="single-image" src={this.props.images[0]} />;
+            return (
+                <WebPImage src={this.props.images[0].image} webp={this.props.images[0].webp} className="single-image" />
+            );
         } else {
             return (
                 <div className="images-carousel">
                     <div ref={this.carouselDiv} className="carousel carousel-slider center">
-                        {this.props.images.map(image => {
+                        {this.props.images.map(imageAndWebP => {
                             return (
-                                <a className="carousel-item" key={image}>
-                                    <img src={image} />
+                                <a className="carousel-item" key={imageAndWebP.image}>
+                                    <WebPImage src={imageAndWebP.image} webp={imageAndWebP.webp} />
                                 </a>
                             );
                         })}

@@ -1,4 +1,9 @@
+@import "../../styles/theme";
+
 .projects {
+    &__container {
+        @include grid();
+    }
     .projects-masonry {
         margin: 0 -0.75rem;
     }
