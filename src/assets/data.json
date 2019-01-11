@@ -166,12 +166,9 @@
         {
             "title": "DEVINE",
             "description": "For my major project in computer engineering, I am a member of the project DEVINE. The goal of DEVINE is to implement into a robot the ability to interact with a human and play the game GuessWhat?! with him, using speech recognition and real-time analysis of his surrounding. This project is currently in development. The main challenge of the team will be to integrate the concepts and the work already done by IGLU researchers in artificial intelligence (AI) into a real project to demonstrate the potential of AI. The robot used for this project is IRL-1 from the Introlab.",
-            "reference": "https://devine.gel.usherbrooke.ca",
+            "reference": "https://devineproject.github.io/",
             "logo": "projects/devine.png",
-            "images": {
-                "path": "projects/devine",
-                "number": 1
-            },
+            "video": "https://www.youtube.com/embed/4hZenY6JE78",
             "tags": ["University", "IGLU", "GuessWhat?!", "AI", "Python", "ROS"]
         },
         {
@@ -187,26 +184,27 @@
         },
         {
             "title": "R2D2 - Concours Robot-Jouet",
-            "description": "At my first year at the Université de Sherbrooke, we participated in a competition were we had to create a simple robot that will help children learn while having fun.",
+            "description": "At my first year at the Université de Sherbrooke, we participated in a competition were we had to create a simple robot that will help children learn while having fun.<br />Our team made a R2D2 who ask questions about the solar system. It then scan the associated board game using RFID to see if the player has the right answer.",
             "logo": "projects/crj.png",
-            "video": "projects/crj.mp4",
+            "video": "https://www.youtube.com/embed/ZSJ4cDC3b8k",
             "prizes": ["100$ + Prix du Jury"],
-            "tags": ["Team Project", "University", "C++", "Arduino", "Robot ArmUS"]
+            "tags": ["Team Project", "University", "C++", "Arduino", "RFID", "Robot ArmUS"]
         },
         {
             "title": "Air Guitar Hero",
             "description": "Air Guitar Hero is a game similar to guitar hero. The main difference: The player plays without a guitar! Instead, we used gloves with conductive contacts to detect the player gestures.",
             "logo": "projects/airguitarhero.png",
-            "video": "projects/airguitarhero.mp4",
+            "video": "https://www.youtube.com/embed/m-P_RStB4fE",
             "tags": ["Team Project", "University", "Java", "Applet"]
         },
         {
             "title": "Découvrir Sherbrooke",
             "description": "For the hacketon HackSherbrooke 2016, my team and I made a simple application that helps new immigrants find great activities to do in the region. We've won the \"Prix coup de coeur\" for this occasion.",
             "logo": "projects/decouvrir.png",
+            "reference": "https://www.cegepsherbrooke.qc.ca/fr/node/9762",
             "images": {
                 "path": "projects/decouvrir",
-                "number": 3
+                "number": 4
             },
             "prizes": ["500$ + Prix coup de coeur"],
             "tags": ["Team Project", "HackSherbrooke16: A 24h Hackathon", "Ruby on Rails", "BootStrap", "MongoDB"]

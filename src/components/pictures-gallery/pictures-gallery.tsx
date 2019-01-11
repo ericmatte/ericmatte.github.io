@@ -15,6 +15,8 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
     private photoSwipeOptions = {
         bgOpacity: 0.9,
         showHideOpacity: true,
+        history: false,
+        fullscreenEl: false,
         shareEl: false
     };
 
@@ -29,7 +31,7 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
                             taking capturing and editing photos.
                         </p>
                         <p className="grey-text text-darken-3 lighten-3">
-                            I also like to do some video editing and filming. You can also check my{" "}
+                            I also like to do some video editing and filming. You can also check out my{" "}
                             <a
                                 className="red-text text-darken-2"
                                 href="https://www.youtube.com/channel/UCnrwdpFWs7BVcplngpt0NWA"

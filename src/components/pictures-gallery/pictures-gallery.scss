@@ -2,11 +2,6 @@
     .gallery {
         padding: 0 30px 40px 30px;
 
-        .pswp {
-            height: 100vh;
-            position: absolute !important;
-        }
-
         .pswp-thumbnails {
             display: flex;
             flex-wrap: wrap;

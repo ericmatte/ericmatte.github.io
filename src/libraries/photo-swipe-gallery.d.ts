@@ -3,9 +3,9 @@ declare module "react-photoswipe" {
 
     export interface IPhotoSwipeGalleryProps {
         items: PhotoSwipeItem[];
-        options: {};
-        thumbnailContent: (item: PhotoSwipeItem) => JSX.Element;
-        onClose: () => void;
+        options?: {};
+        thumbnailContent?: (item: PhotoSwipeItem) => JSX.Element;
+        onClose?: () => void;
     }
 
     class PhotoSwipeGallery extends React.Component<IPhotoSwipeGalleryProps> {}

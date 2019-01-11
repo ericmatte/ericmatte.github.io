@@ -3,6 +3,7 @@ import "./project-card.scss";
 import * as React from "react";
 
 import Carousel from "./carousel/carousel";
+import EmbeddedVideo from "./embedded-video/embedded-video";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type ProjectImages = {
@@ -30,8 +31,8 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
                     {this.getProjectPreview()}
 
                     <div className="card-content">
-                        <div className="valign-wrapper">
-                            <img className="project-card__logo circle" src={`public/${this.props.logo}`} />
+                        <div className="project-card__title valign-wrapper">
+                            <img className="project-card__logo circle z-depth-1" src={`public/${this.props.logo}`} />
                             <span className="card-title valign">{this.props.title}</span>
                         </div>
 
@@ -106,7 +107,7 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
         if (this.props.images) {
             return <Carousel images={this.getProjectImages(this.props.images)} />;
         } else if (this.props.video) {
-            return;
+            return <EmbeddedVideo youtubeUrl={this.props.video} />;
         } else {
             return;
         }
