@@ -27,7 +27,7 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
             <div className="pictures-gallery">
                 <div className="grey lighten-3">
                     <div className="pictures-gallery__container">
-                        <div className="row">
+                        <div>
                             <h2 className="header">Photos</h2>
                             <p className="grey-text text-darken-3 lighten-3">
                                 One thing I really like is go on an adventure and take some beautiful pictures. I enjoy

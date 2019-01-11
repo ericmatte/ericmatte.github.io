@@ -5,7 +5,7 @@ $white-border: #e2e2e2;
 @mixin grid() {
     display: grid;
     padding: 0 35px 20px 35px;
-    grid-template-columns: 1fr minmax(320px, 1000px) 1fr;
+    grid-template-columns: 1fr minmax(320px, 1100px) 1fr;
 
     & > * {
         grid-column: 2;
