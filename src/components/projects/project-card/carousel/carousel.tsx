@@ -11,6 +11,7 @@ export type ImageAndWebPPath = {
 };
 
 interface ICarouselProps {
+    renderCarousel: boolean;
     images: ImageAndWebPPath[];
 }
 
@@ -18,21 +19,19 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
     private carouselDiv = React.createRef<HTMLDivElement>();
     private carouselInstance: M.Carousel | undefined;
 
-    public componentDidMount() {
-        if (this.carouselDiv.current) {
-            this.carouselInstance = M.Carousel.init(this.carouselDiv.current, {
-                indicators: true,
-                fullWidth: true
-            });
-        }
-    }
-
     public render() {
         if (this.props.images.length === 1) {
             return (
                 <WebPImage src={this.props.images[0].image} webp={this.props.images[0].webp} className="single-image" />
             );
         } else {
+            if (this.props.renderCarousel && this.carouselDiv.current) {
+                this.carouselInstance = M.Carousel.init(this.carouselDiv.current, {
+                    indicators: true,
+                    fullWidth: true
+                });
+            }
+
             return (
                 <div className="images-carousel">
                     <div ref={this.carouselDiv} className="carousel carousel-slider center">

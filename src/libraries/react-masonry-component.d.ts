@@ -1,6 +1,10 @@
 declare module "react-masonry-component" {
     import * as React from "react";
 
+    export type MasonryApi = {
+        on: (method: string, func: () => void) => void;
+    };
+
     export interface MasonryProps {
         className?: string;
         elementType?: string;
@@ -10,5 +14,9 @@ declare module "react-masonry-component" {
         imagesLoadedOptions?: any;
     }
 
-    export default class Masonry extends React.Component<MasonryProps> {}
+    class IMasonry extends React.Component<MasonryProps> {
+        masonry: MasonryApi;
+    }
+
+    export default class Masonry extends IMasonry {}
 }

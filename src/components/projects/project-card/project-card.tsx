@@ -22,6 +22,7 @@ interface IProjectCardProps {
     videoId?: string;
     prizes?: string[];
     tags: string[];
+    isMasonryRendered: boolean;
 }
 
 export default class ProjectCard extends React.PureComponent<IProjectCardProps, {}> {
@@ -106,7 +107,12 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
 
     private getProjectPreview() {
         if (this.props.images) {
-            return <Carousel images={this.getProjectImages(this.props.images)} />;
+            return (
+                <Carousel
+                    renderCarousel={this.props.isMasonryRendered}
+                    images={this.getProjectImages(this.props.images)}
+                />
+            );
         } else if (this.props.videoId) {
             return <EmbeddedVideo youtubeId={this.props.videoId} />;
         } else {
