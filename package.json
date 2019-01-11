@@ -11,7 +11,7 @@
         "start": "npm run start-dev",
         "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist -b master"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.0",
