@@ -1,4 +1,5 @@
 @import "../../styles/theme";
+@import "../../styles/variables";
 
 .pictures-gallery {
     &__container {
@@ -15,8 +16,10 @@
         .pswp-thumbnails {
             display: flex;
             flex-wrap: wrap;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 0 10px;
+            @media #{$small-and-down} {
+                margin: 0 0;
+            }
 
             .pswp-thumbnail {
                 display: flex;
@@ -36,6 +39,9 @@
                     object-fit: cover;
                     border-radius: 5px;
                     height: 100%;
+                    @media #{$small-and-down} {
+                        width: 100%;
+                    }
                 }
             }
         }

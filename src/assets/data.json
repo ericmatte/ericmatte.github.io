@@ -1,12 +1,6 @@
 {
     "pictures": [
         {
-            "caption": "Angel Girl",
-            "width": 1280,
-            "height": 1920,
-            "filename": "Angel.jpg"
-        },
-        {
             "caption": "Backyard",
             "width": 2340,
             "height": 1080,
@@ -53,6 +47,12 @@
             "width": 3132,
             "height": 1080,
             "filename": "Field-And-Trees.jpg"
+        },
+        {
+            "caption": "Angel Girl",
+            "width": 1280,
+            "height": 1920,
+            "filename": "Angel.jpg"
         },
         {
             "caption": "Flying Girl",
