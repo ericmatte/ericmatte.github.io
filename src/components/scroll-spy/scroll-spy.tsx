@@ -2,7 +2,7 @@ import "./scroll-spy.scss";
 
 import * as React from "react";
 
-import { Section } from "../../App";
+import { Section } from "../../app-content";
 
 interface IScrollSpyProps {
     sections: Section[];
