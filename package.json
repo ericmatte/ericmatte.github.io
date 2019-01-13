@@ -1,6 +1,6 @@
 {
     "name": "ericmatte.github.io",
-    "homepage": "https://ericmatte.github.io/",
+    "homepage": "https://ericmatte.me/",
     "version": "1.0.0",
     "author": "Eric Matte",
     "license": "GPL-3.0",
@@ -9,7 +9,7 @@
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build -b master"
     },
     "devDependencies": {
         "@types/classnames": "^2.2.6",

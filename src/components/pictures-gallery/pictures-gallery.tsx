@@ -30,8 +30,8 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
                         <div>
                             <h2 className="header">Photos</h2>
                             <p className="grey-text text-darken-3 lighten-3">
-                                One thing I really like is go on an adventure and take some beautiful pictures. I enjoy
-                                taking capturing and editing photos.
+                                One thing I really like is going on an adventure and taking beautiful pictures. I enjoy
+                                capturing and editing photos.
                             </p>
                             <p className="grey-text text-darken-3 lighten-3">
                                 I also like to do some video editing and filming. You can also check out my{" "}
