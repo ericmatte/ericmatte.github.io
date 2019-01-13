@@ -1,7 +1,8 @@
 import "./animated-mouse.scss";
 
 import * as React from "react";
-import * as classNames from "classnames";
+
+import classNames from "classnames";
 
 interface IAnimatedMouseProps {
     onClick: () => void;

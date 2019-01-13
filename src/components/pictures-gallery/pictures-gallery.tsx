@@ -1,13 +1,13 @@
 import "./pictures-gallery.scss";
 
 import * as React from "react";
-import * as data from "../../assets/data.json";
 
 import { PhotoSwipeGallery, PhotoSwipeItem } from "react-photoswipe";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyLoad from "react-lazyload";
 import WebPImage from "../webp-image/webp-image";
+import data from "../../assets/data";
 
 interface IPicturesGalleryProps {
     slideShowToggled: (isOpen: boolean) => void;
@@ -65,9 +65,9 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
     private getPhotoSwipeItems() {
         return data.pictures.map(picture => {
             return {
-                src: `public/pictures/${picture.filename}`,
-                thumbnail: `public/pictures/thumbnails/${picture.filename}`,
-                webPThumbnail: `public/pictures/thumbnails/webp/${picture.filename}nI.webp`,
+                src: `${process.env.PUBLIC_URL}/pictures/${picture.filename}`,
+                thumbnail: `${process.env.PUBLIC_URL}/pictures/thumbnails/${picture.filename}`,
+                webPThumbnail: `${process.env.PUBLIC_URL}/pictures/thumbnails/webp/${picture.filename}nI.webp`,
                 h: picture.height,
                 w: picture.width,
                 title: picture.caption

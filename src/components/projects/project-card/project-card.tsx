@@ -34,7 +34,10 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
 
                     <div className="card-content">
                         <div className="project-card__title valign-wrapper">
-                            <img className="project-card__logo circle z-depth-1" src={`public/${this.props.logo}`} />
+                            <img
+                                className="project-card__logo circle z-depth-1"
+                                src={`${process.env.PUBLIC_URL}/${this.props.logo}`}
+                            />
                             <span className="card-title valign">{this.props.title}</span>
                         </div>
 
@@ -125,8 +128,8 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
 
         for (let i = 1; i <= projectImages.number; i++) {
             slides.push({
-                image: `public/${projectImages.path}/${i}.jpg`,
-                webp: `public/${projectImages.path}/webp/${i}.webp`
+                image: `${process.env.PUBLIC_URL}/${projectImages.path}/${i}.jpg`,
+                webp: `${process.env.PUBLIC_URL}/${projectImages.path}/webp/${i}.webp`
             });
         }
 

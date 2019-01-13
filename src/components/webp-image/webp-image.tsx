@@ -13,7 +13,6 @@ interface IImageProps {
 
 function canUseWebP() {
     const elem = document.createElement("canvas");
-    console.log("erbp test");
     if (!!(elem.getContext && elem.getContext("2d"))) {
         // was able or not to get WebP representation
         return elem.toDataURL("image/webp").indexOf("data:image/webp") === 0;

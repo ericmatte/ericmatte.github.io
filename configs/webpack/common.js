@@ -38,7 +38,10 @@ module.exports = {
     },
     plugins: [
         new CheckerPlugin(),
-        new HtmlWebpackPlugin({ template: "index.html.ejs", favicon: "../src/assets/my-icon.png" })
+        new HtmlWebpackPlugin({
+            template: "index.html.ejs",
+            favicon: "../src/assets/my-icon.png"
+        })
     ],
     externals: {
         react: "React",

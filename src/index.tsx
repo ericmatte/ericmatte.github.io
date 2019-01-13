@@ -1,31 +1,12 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
+import * as serviceWorker from "./serviceWorker";
 
 import App from "./App";
-import { AppContainer } from "react-hot-loader";
-import { render } from "react-dom";
 
-const rootEl = document.getElementById("root");
+ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
 
-render(
-    <AppContainer>
-        <App />
-    </AppContainer>,
-    rootEl
-);
-
-// Hot Module Replacement API
-// tslint:disable-next-line:no-any
-declare let module: { hot: any };
-
-if (module.hot) {
-    module.hot.accept("./App", () => {
-        const NewApp = require("./App").default;
-
-        render(
-            <AppContainer>
-                <NewApp />
-            </AppContainer>,
-            rootEl
-        );
-    });
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.register();

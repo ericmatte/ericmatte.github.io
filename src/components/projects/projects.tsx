@@ -1,11 +1,11 @@
 import "./projects.scss";
 
 import * as React from "react";
-import * as data from "../../assets/data.json";
 
 import Masonry, { MasonryApi } from "react-masonry-component";
 
 import ProjectCard from "./project-card/project-card";
+import data from "../../assets/data";
 
 interface IProjectsState {
     isMasonryRendered: boolean;

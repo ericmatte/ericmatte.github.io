@@ -1,9 +1,9 @@
 import "./email-fab.scss";
 
 import * as React from "react";
-import * as classNames from "classnames";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classNames from "classnames";
 
 export interface IEmailFabProps {
     visible: boolean;

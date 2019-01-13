@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "outDir": "build/dist",
         "sourceMap": true,
-        "module": "commonjs",
+        "module": "esnext",
         "target": "es5",
-        "jsx": "react",
+        "jsx": "preserve",
         "lib": ["es5", "es6", "es7", "dom"],
+        "moduleResolution": "node",
+        "rootDir": "src",
         "experimentalDecorators": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
@@ -16,11 +18,23 @@
         "noFallthroughCasesInSwitch": true,
         "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
-        "strict": true
+        "strict": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
+        "noEmit": true
     },
-    "include": ["./src/**/*"],
-    "files": ["assets.d.ts"],
-    "awesomeTypescriptLoaderOptions": {
-        "reportFiles": ["./src/**/*"]
-    }
+    "exclude": [
+        "node_modules",
+        "public",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "src/setupTests.ts"
+    ],
+    "include": ["src"]
 }

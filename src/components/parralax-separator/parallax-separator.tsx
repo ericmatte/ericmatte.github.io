@@ -1,7 +1,8 @@
 import "./parallax-separator.scss";
 
 import * as React from "react";
-import * as separatorImage from "../../assets/separator.jpg";
+
+import separatorImage from "../../assets/separator.jpg";
 
 export default class ParallaxSeparator extends React.PureComponent<{}, {}> {
     private parallaxDiv = React.createRef<HTMLDivElement>();

@@ -1,7 +1,6 @@
 import "./personal-introduction.scss";
 
 import * as React from "react";
-import * as me from "../../assets/my-icon.png";
 
 import AcrylicContainer from "../acrylic-container/acrylic-container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +11,10 @@ export default class PersonalIntroduction extends React.PureComponent<{}, {}> {
             <AcrylicContainer>
                 <div className="personal-introduction">
                     <div className="title">
-                        <img src={me} className="profile-picture hide-on-small-only" />
+                        <img
+                            src={`${process.env.PUBLIC_URL}/favicon.png`}
+                            className="profile-picture hide-on-small-only"
+                        />
                         <div>
                             <h3>Eric Matte</h3>
                             <h5>Full Stack Developer</h5>
