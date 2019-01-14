@@ -22,7 +22,7 @@ export default class ScrollSpy extends React.PureComponent<IScrollSpyProps, IScr
         };
     }
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         this.sectionLinks.forEach(t => M.Tooltip.init(t.current!, {}));
         this.props.sections.forEach(s =>
             M.ScrollSpy.init(s.ref.current!, {
@@ -31,7 +31,7 @@ export default class ScrollSpy extends React.PureComponent<IScrollSpyProps, IScr
         );
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className="scroll-spy valign-wrapper hide-on-small-only">
                 <ul className="indicators">

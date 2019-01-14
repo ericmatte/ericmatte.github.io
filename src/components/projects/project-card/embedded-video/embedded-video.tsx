@@ -7,9 +7,9 @@ interface IEmbeddedVideo {
 }
 
 export default class EmbeddedVideo extends React.PureComponent<IEmbeddedVideo, {}> {
-    private youtubeDiv = React.createRef<HTMLDivElement>();
+    private youtubeDiv: React.RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         const source = `https://img.youtube.com/vi/${this.props.youtubeId}/sddefault.jpg`;
 
         const image = new Image();
@@ -17,7 +17,7 @@ export default class EmbeddedVideo extends React.PureComponent<IEmbeddedVideo, {
         image.addEventListener("load", () => this.youtubeDiv.current!.appendChild(image));
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className="embedded-video">
                 <div className="ratio-keeper">
@@ -31,7 +31,7 @@ export default class EmbeddedVideo extends React.PureComponent<IEmbeddedVideo, {
         );
     }
 
-    private loadAndPlayVideo() {
+    private loadAndPlayVideo(): void {
         const iframe = document.createElement("iframe");
 
         iframe.setAttribute("frameborder", "0");

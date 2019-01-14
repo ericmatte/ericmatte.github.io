@@ -40,11 +40,11 @@ export default class App extends React.Component<{}, IAppState> {
         };
     }
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         window.addEventListener("scroll", () => this.handleScroll());
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <AppRoutes>
                 <div className="app">
@@ -79,7 +79,7 @@ export default class App extends React.Component<{}, IAppState> {
         );
     }
 
-    private handleScroll() {
+    private handleScroll(): void {
         const imagesSection = this.sections[2].ref.current;
         if (imagesSection) {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;

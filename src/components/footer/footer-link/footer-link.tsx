@@ -13,7 +13,7 @@ export interface IFooterLinkProps {
 }
 
 export default class FooterLink extends React.PureComponent<IFooterLinkProps, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <li className="footer-link">
                 <a

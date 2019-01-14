@@ -16,10 +16,10 @@ interface ICarouselProps {
 }
 
 export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
-    private carouselDiv = React.createRef<HTMLDivElement>();
+    private carouselDiv: React.RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
     private carouselInstance: M.Carousel | undefined;
 
-    public render() {
+    public render(): JSX.Element {
         if (this.props.images.length === 1) {
             return (
                 <WebPImage src={this.props.images[0].image} webp={this.props.images[0].webp} className="single-image" />
@@ -54,7 +54,7 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
         }
     }
 
-    private nextSlide(direction: "left" | "right") {
+    private nextSlide(direction: "left" | "right"): void {
         if (!this.carouselInstance) {
             return;
         }

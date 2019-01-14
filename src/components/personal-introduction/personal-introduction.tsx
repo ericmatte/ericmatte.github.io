@@ -6,7 +6,7 @@ import AcrylicContainer from "../acrylic-container/acrylic-container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class PersonalIntroduction extends React.PureComponent<{}, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <AcrylicContainer>
                 <div className="personal-introduction">

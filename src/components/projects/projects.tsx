@@ -21,7 +21,7 @@ export default class Projects extends React.PureComponent<{}, IProjectsState> {
         };
     }
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         if (this.masonry) {
             this.masonry.on("layoutComplete", () => {
                 this.setState({
@@ -31,7 +31,7 @@ export default class Projects extends React.PureComponent<{}, IProjectsState> {
         }
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className="projects">
                 <div className="grey lighten-3">

@@ -3,7 +3,7 @@ import "./acrylic-container.scss";
 import * as React from "react";
 
 export default class AcrylicContainer extends React.PureComponent<{}, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <section className="acrylic-container">
                 <div className="acrylic z-depth-5">

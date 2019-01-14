@@ -11,7 +11,7 @@ interface IImageProps {
     className?: string;
 }
 
-function canUseWebP() {
+function canUseWebP(): boolean {
     const elem = document.createElement("canvas");
     if (!!(elem.getContext && elem.getContext("2d"))) {
         // was able or not to get WebP representation
@@ -23,7 +23,7 @@ function canUseWebP() {
 }
 
 export default class WebPImage extends React.PureComponent<IImageProps, {}> {
-    public render() {
+    public render(): JSX.Element {
         const { src, webp, alt, title, style, className } = this.props;
         let image = src;
 

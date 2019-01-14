@@ -2,7 +2,7 @@ import "./pictures-gallery.scss";
 
 import * as React from "react";
 
-import { PhotoSwipeGallery, PhotoSwipeItem } from "react-photoswipe";
+import { PhotoSwipeGallery, PhotoSwipeItem, PhotoSwipeOptions } from "react-photoswipe";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyLoad from "react-lazyload";
@@ -14,7 +14,7 @@ interface IPicturesGalleryProps {
 }
 
 export default class PicturesGallery extends React.PureComponent<IPicturesGalleryProps, {}> {
-    private photoSwipeOptions = {
+    private photoSwipeOptions: PhotoSwipeOptions = {
         bgOpacity: 0.9,
         showHideOpacity: true,
         history: false,
@@ -22,7 +22,7 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
         shareEl: false
     };
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className="pictures-gallery">
                 <div className="grey lighten-3">
@@ -62,7 +62,7 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
         );
     }
 
-    private getPhotoSwipeItems() {
+    private getPhotoSwipeItems(): PhotoSwipeItem[] {
         return data.pictures.map(picture => {
             return {
                 src: `${process.env.PUBLIC_URL}/pictures/${picture.filename}`,
@@ -75,7 +75,7 @@ export default class PicturesGallery extends React.PureComponent<IPicturesGaller
         });
     }
 
-    private getThumbnailContent(item: PhotoSwipeItem) {
+    private getThumbnailContent(item: PhotoSwipeItem): JSX.Element {
         // return <img onClick={() => this.props.slideShowToggled(true)} />;
         return (
             <LazyLoad height={200} offset={500}>

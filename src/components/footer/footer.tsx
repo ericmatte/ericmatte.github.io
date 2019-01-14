@@ -5,7 +5,7 @@ import * as React from "react";
 import FooterLink from "./footer-link/footer-link";
 
 export default class Footer extends React.PureComponent<{}, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <footer className="page-footer grey darken-4">
                 <div className="footer-copyright">

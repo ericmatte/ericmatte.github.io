@@ -5,7 +5,7 @@ import { Redirect, Route, BrowserRouter as Router, Switch } from "react-router-d
 const SUB_PATH = "/portfolio";
 
 export default class AppRoutes extends React.Component<{}, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <Router basename={process.env.PUBLIC_URL}>
                 <Switch>

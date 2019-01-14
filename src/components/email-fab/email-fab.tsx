@@ -10,15 +10,15 @@ export interface IEmailFabProps {
 }
 
 export default class EmailFab extends React.PureComponent<IEmailFabProps, {}> {
-    private tooltipA = React.createRef<HTMLAnchorElement>();
+    private tooltipA: React.RefObject<HTMLAnchorElement> = React.createRef<HTMLAnchorElement>();
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         if (this.tooltipA.current) {
             M.Tooltip.init(this.tooltipA.current, {});
         }
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className={classNames("email-fab fading fixed-action-btn", { visible: this.props.visible })}>
                 <a

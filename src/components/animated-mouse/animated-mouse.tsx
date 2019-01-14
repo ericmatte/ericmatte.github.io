@@ -20,11 +20,11 @@ export default class AnimatedMouse extends React.PureComponent<IAnimatedMousePro
         };
     }
 
-    public componentDidMount() {
+    public componentDidMount(): void {
         window.addEventListener("scroll", e => this.handleScroll(e));
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div
                 onClick={() => this.props.onClick()}
@@ -35,7 +35,7 @@ export default class AnimatedMouse extends React.PureComponent<IAnimatedMousePro
         );
     }
 
-    private handleScroll(_event: UIEvent) {
+    private handleScroll(_event: UIEvent): void {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         this.setState({
             visible: scrollTop < window.innerHeight / 3

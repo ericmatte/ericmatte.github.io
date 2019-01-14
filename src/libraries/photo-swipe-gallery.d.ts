@@ -1,9 +1,17 @@
 declare module "react-photoswipe" {
     import * as React from "react";
 
+    export type PhotoSwipeOptions = {
+        bgOpacity: number;
+        showHideOpacity: boolean;
+        history: boolean;
+        fullscreenEl: boolean;
+        shareEl: boolean;
+    };
+
     export interface IPhotoSwipeGalleryProps {
         items: PhotoSwipeItem[];
-        options?: {};
+        options?: PhotoSwipeOptions;
         thumbnailContent?: (item: PhotoSwipeItem) => JSX.Element;
         onClose?: () => void;
     }

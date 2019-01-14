@@ -26,7 +26,7 @@ interface IProjectCardProps {
 }
 
 export default class ProjectCard extends React.PureComponent<IProjectCardProps, {}> {
-    public render() {
+    public render(): JSX.Element {
         return (
             <div className="project-card col m12 l6">
                 <div className="card">
@@ -56,7 +56,7 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
         );
     }
 
-    private getActionLinks() {
+    private getActionLinks(): JSX.Element | undefined {
         if (!(this.props.reference || this.props.github)) {
             return;
         }
@@ -76,7 +76,7 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
         );
     }
 
-    private getPrizes() {
+    private getPrizes(): JSX.Element | undefined {
         if (!this.props.prizes) {
             return;
         }
@@ -94,7 +94,7 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
         );
     }
 
-    private getTags() {
+    private getTags(): JSX.Element | undefined {
         return (
             <div className="project-tags">
                 {this.props.tags.map(tag => {
@@ -108,7 +108,7 @@ export default class ProjectCard extends React.PureComponent<IProjectCardProps, 
         );
     }
 
-    private getProjectPreview() {
+    private getProjectPreview(): JSX.Element | undefined {
         if (this.props.images) {
             return (
                 <Carousel
