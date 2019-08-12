@@ -68,7 +68,9 @@ module.exports = {
       "4xl": "2.222rem", // 40px
       "5xl": "2.667rem", // 48px
       "6xl": "3.333rem", // 60px
-      "7xl": "4.444rem" // 80px
+      "display-0": "4.444rem",
+      "display-1": "5rem",
+      "display-2": "10rem"
     },
 
     lineHeight: {
@@ -261,6 +263,11 @@ module.exports = {
       "inner": "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
       "outline": "0 0 0 3px rgba(52,144,220,0.5)",
       "none": "none"
+    },
+
+    container: {
+      center: true,
+      padding: "1rem"
     }
   },
   variants: {},

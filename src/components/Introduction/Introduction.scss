@@ -1,7 +1,46 @@
 .Introduction {
-  h1 {
-    @apply font-bold text-xl text-greenery;
+  @apply relative bg-black;
 
-    font-size: $large;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba($peachy, 0) 80%, rgba($peachy, 0.8) 100%),
+    linear-gradient(to bottom, $greenery 0%, $greenery 100%);
+
+  .image {
+    @apply absolute left-0 bottom-0 ml-24;
+
+    max-height: 115vh;
+  }
+
+  .content {
+    @apply relative pt-32 leading-tight;
+
+    .titles {
+      transform: translateX(50%);
+
+      .title {
+        @apply text-display-0;
+        &-name {
+        }
+        &-abbreviation {
+          @apply text-4xl;
+        }
+      }
+
+      .tagline {
+        @apply text-4xl;
+      }
+    }
+
+    .text {
+      @apply mt-48 text-2xl leading-normal;
+    }
+  }
+
+  .background-text {
+    @apply absolute bottom-0 left-0 mb-32 font-bold font-sans;
+
+    @include text-outline($peachy);
+
+    font-size: 24vw;
   }
 }

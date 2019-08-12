@@ -1,0 +1,5 @@
+@mixin text-outline($color) {
+  color: transparent;
+  -webkit-text-stroke-color: $color;
+  -webkit-text-stroke-width: 0.3px;
+}

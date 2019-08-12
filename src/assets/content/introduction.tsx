@@ -7,6 +7,7 @@ export const introduction = {
   fullName: "Eric Matte",
   titleAbbreviation: "CPI",
   title: "Full Stack Developer",
+  backgroundText: "Portfolio",
   text: (
     <React.Fragment>
       <p>

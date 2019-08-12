@@ -5,6 +5,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+@import "styles/imports.scss";
+@import "styles/mixins.scss";
 @import "styles/variables.scss";
 
 @import "components/Introduction/Introduction.scss";
