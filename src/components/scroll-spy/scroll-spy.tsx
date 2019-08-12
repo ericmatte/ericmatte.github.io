@@ -1,5 +1,3 @@
-import "./scroll-spy.scss";
-
 import * as React from "react";
 
 import { Section } from "../../App";
@@ -23,12 +21,12 @@ export default class ScrollSpy extends React.PureComponent<IScrollSpyProps, IScr
     }
 
     public componentDidMount(): void {
-        this.sectionLinks.forEach(t => M.Tooltip.init(t.current!, {}));
-        this.props.sections.forEach(s =>
-            M.ScrollSpy.init(s.ref.current!, {
-                scrollOffset: 0
-            })
-        );
+        // this.sectionLinks.forEach(t => M.Tooltip.init(t.current!, {}));
+        // this.props.sections.forEach(s =>
+        //     M.ScrollSpy.init(s.ref.current!, {
+        //         scrollOffset: 0
+        //     })
+        // );
     }
 
     public render(): JSX.Element {

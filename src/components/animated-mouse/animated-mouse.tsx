@@ -1,5 +1,3 @@
-import "./animated-mouse.scss";
-
 import * as React from "react";
 
 import classNames from "classnames";
@@ -35,7 +33,7 @@ export default class AnimatedMouse extends React.PureComponent<IAnimatedMousePro
         );
     }
 
-    private handleScroll(_event: UIEvent): void {
+    private handleScroll(_event: Event): void {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         this.setState({
             visible: scrollTop < window.innerHeight / 3

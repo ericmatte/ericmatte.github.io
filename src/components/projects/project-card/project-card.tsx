@@ -1,5 +1,3 @@
-import "./project-card.scss";
-
 import * as React from "react";
 
 import Carousel, { ImageAndWebPPath } from "./carousel/carousel";

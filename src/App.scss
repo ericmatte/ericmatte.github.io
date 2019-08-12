@@ -1,22 +1,13 @@
-@import "styles/imports";
+// Tailwind
+// @tailwind base;
+// @tailwind components;
 
-html,
-body,
-#root {
-    // height: 100%;
-    // background-color: $background;
-    margin: 0;
-    padding: 0;
-}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
-.section {
-    padding: 0;
-    .container {
-        display: table;
-    }
-}
+@import "styles/variables.scss";
 
-::selection {
-    background: #2a7bd0;
-    color: white;
-}
+@import "components/Introduction/Introduction.scss";
+
+@import "tailwindcss/utilities";
+// @tailwind utilities;

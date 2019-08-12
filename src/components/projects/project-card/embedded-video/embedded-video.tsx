@@ -1,5 +1,3 @@
-import "./embedded-video.scss";
-
 import * as React from "react";
 
 interface IEmbeddedVideo {

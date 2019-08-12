@@ -1,5 +1,3 @@
-import "./acrylic-container.scss";
-
 import * as React from "react";
 
 export default class AcrylicContainer extends React.PureComponent<{}, {}> {

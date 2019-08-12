@@ -1,5 +1,3 @@
-import "./carousel.scss";
-
 import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +15,7 @@ interface ICarouselProps {
 
 export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
     private carouselDiv: React.RefObject<HTMLDivElement> = React.createRef<HTMLDivElement>();
-    private carouselInstance: M.Carousel | undefined;
+    private carouselInstance: undefined;
 
     public render(): JSX.Element {
         if (this.props.images.length === 1) {
@@ -26,10 +24,10 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
             );
         } else {
             if (this.props.renderCarousel && this.carouselDiv.current) {
-                this.carouselInstance = M.Carousel.init(this.carouselDiv.current, {
-                    indicators: true,
-                    fullWidth: true
-                });
+                // this.carouselInstance = M.Carousel.init(this.carouselDiv.current, {
+                //     indicators: true,
+                //     fullWidth: true
+                // });
             }
 
             return (
@@ -54,15 +52,15 @@ export default class Carousel extends React.PureComponent<ICarouselProps, {}> {
         }
     }
 
-    private nextSlide(direction: "left" | "right"): void {
+    private nextSlide(_direction: "left" | "right"): void {
         if (!this.carouselInstance) {
             return;
         }
 
-        if (direction === "left") {
-            this.carouselInstance.prev();
-        } else {
-            this.carouselInstance.next();
-        }
+        // if (direction === "left") {
+        //     this.carouselInstance.prev();
+        // } else {
+        //     this.carouselInstance.next();
+        // }
     }
 }

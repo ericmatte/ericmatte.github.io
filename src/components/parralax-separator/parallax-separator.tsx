@@ -1,5 +1,3 @@
-import "./parallax-separator.scss";
-
 import * as React from "react";
 
 import separatorImage from "../../assets/separator.jpg";
@@ -9,7 +7,7 @@ export default class ParallaxSeparator extends React.PureComponent<{}, {}> {
 
     public componentDidMount(): void {
         if (this.parallaxDiv.current) {
-            M.Parallax.init(this.parallaxDiv.current, {});
+            // M.Parallax.init(this.parallaxDiv.current, {});
         }
     }
 

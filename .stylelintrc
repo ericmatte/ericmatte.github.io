@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap/scss",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "scss/at-rule-no-unknown": null,
+    "scss/dollar-variable-default": null,
+    "at-rule-name-space-after": "always-single-line",
+    "max-empty-lines": 2,
+    "value-list-comma-space-after": "always-single-line",
+    "selector-class-pattern": null,
+    "selector-no-qualifying-type": [true, {
+      ignore: ["attribute", "class", "id"]
+    }],
+		"declaration-empty-line-before": ["always", {
+      "except": ["first-nested", "after-comment", "after-declaration"]
+		}]
+  }
+}

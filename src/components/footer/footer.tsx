@@ -1,5 +1,3 @@
-import "./footer.scss";
-
 import * as React from "react";
 
 import FooterLink from "./footer-link/footer-link";

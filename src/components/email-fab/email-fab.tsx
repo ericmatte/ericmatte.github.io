@@ -1,5 +1,3 @@
-import "./email-fab.scss";
-
 import * as React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,7 +12,7 @@ export default class EmailFab extends React.PureComponent<IEmailFabProps, {}> {
 
     public componentDidMount(): void {
         if (this.tooltipA.current) {
-            M.Tooltip.init(this.tooltipA.current, {});
+            // M.Tooltip.init(this.tooltipA.current, {});
         }
     }
 
