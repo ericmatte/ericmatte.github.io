@@ -1,15 +1,14 @@
 // Tailwind
-// @tailwind base;
-// @tailwind components;
+@tailwind base;
+@tailwind components;
+// @import "tailwindcss/base";
+// @import "tailwindcss/components";
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import "./styles/imports.scss";
+@import "./styles/mixins.scss";
+@import "./styles/variables.scss";
 
-@import "styles/imports.scss";
-@import "styles/mixins.scss";
-@import "styles/variables.scss";
+@import "./components/Introduction/Introduction.scss";
 
-@import "components/Introduction/Introduction.scss";
-
-@import "tailwindcss/utilities";
+// @import "tailwindcss/utilities";
 // @tailwind utilities;

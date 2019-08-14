@@ -1,7 +1,7 @@
-$montserrat-font-path: "./fonts/montserrat/webfonts";
+$montserrat-font-path: "./styles/fonts/montserrat/webfonts";
 @import "./fonts/montserrat/scss/montserrat";
 
-$roboto-font-path: "./fonts/roboto/webfonts";
+$roboto-font-path: "./styles/fonts/roboto/webfonts";
 @import "./fonts/roboto/scss/roboto";
 
 html {
@@ -23,23 +23,6 @@ p {
   @apply mb-2;
 }
 
-// html,
-// body,
-// #root {
-//     padding: 0;
-//     // height: 100%;
-//     // background-color: $background;
-//     margin: 0;
-// }
-
-// .section {
-//     padding: 0;
-//     .container {
-//         display: table;
-//     }
-// }
-
-// ::selection {
-//     color: white;
-//     background: #fe0;
+// .container {
+//   @apply mx-20;
 // }

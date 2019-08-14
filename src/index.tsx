@@ -1,4 +1,4 @@
-import "./tailwind.scss";
+import "./tailwind.css";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
