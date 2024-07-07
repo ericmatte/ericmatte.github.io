@@ -1,0 +1,49 @@
+{
+  "React component": {
+    "scope": "typescriptreact",
+    "prefix": ["reactfunction"],
+    "body": [
+      "type Props = {",
+      "  ${2:prop};",
+      "};",
+      "",
+      "const ${1:$TM_FILENAME_BASE} = ({}: Props) => {",
+      "  return (",
+      "    <div>",
+      "      <h1>${1:$TM_FILENAME_BASE}</h1>",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};",
+      ""
+    ]
+  },
+
+  "React custom hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": ["reacthook"],
+    "body": [
+      "type Props = {",
+      "  ${2:prop};",
+      "};",
+      "",
+      "const ${1:$TM_FILENAME_BASE} = ({}: Props) => {",
+      "  // custom hook logic",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};",
+      ""
+    ]
+  },
+  
+  "Generate index.js": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": ["index"],
+    "body": [
+      "import ${1:${TM_DIRECTORY/.*\\/([a-zA-Z0-9]+)$/$1/}} from \"./${1:${TM_DIRECTORY/.*\\/([a-zA-Z0-9]+)$/$1/}}\";",
+      "",
+      "export default ${1:${TM_DIRECTORY/.*\\/([a-zA-Z0-9]+)$/$1/}};"
+    ]
+  }
+}
