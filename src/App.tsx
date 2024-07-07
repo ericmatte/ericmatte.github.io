@@ -1,5 +1,7 @@
+import WelcomeScreen from "./components/WelcomeScreen";
+
 const App = () => {
-  return <>Hello world</>;
+  return <WelcomeScreen />;
 };
 
 export default App;

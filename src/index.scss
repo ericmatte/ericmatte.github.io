@@ -10,3 +10,9 @@
 body {
   @apply font-roboto font-light text-gray-800;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
